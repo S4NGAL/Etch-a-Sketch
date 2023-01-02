@@ -1,7 +1,8 @@
 const gridContainer = document.querySelector("#grid_container");
-
-
-for (let i = 0; i < 8*8; i++){
+let resolution = 16;
+let pixelSize = (480 - (resolution * 4)) / resolution;
+console.log(pixelSize);
+for (let i = 0; i < resolution*resolution; i++){
     let temp = document.createElement("div");
     temp.className = "pixel";
     gridContainer.appendChild(temp);
@@ -13,7 +14,7 @@ for (let i = 0; i < 8*8; i++){
 
 const pixels = document.getElementsByClassName("pixel");
 for (let i = 0; i < pixels.length; i++) {
-    pixels[i].style.width = "56px";
-    pixels[i].style.height = "56px";
+    pixels[i].style.width = `${pixelSize}px`;
+    pixels[i].style.height = `${pixelSize}px`;
 }
 
