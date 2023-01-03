@@ -2,22 +2,7 @@ let pixels;
 let colors = document.getElementById("colorPicker");
 let color;
 let isBorder = 1;
-document.getElementById("toggle_borders").addEventListener("click", function(){
-    if(!isBorder) {
-        let temp = document.getElementsByClassName("pixel");
-        for (let i= 0; i<temp.length; i++){
-            temp[i].style.border = "1px solid grey";
-        }
-        isBorder = 1;
-    }else {
-        let temp = document.getElementsByClassName("pixel");
-        for (let i= 0; i<temp.length; i++){
-            temp[i].style.border = "1px solid white";
-        }
-        isBorder = 0;
-    }
 
-});
 
 const gridContainer = document.querySelector("#grid_container");
 let canvasSize = gridContainer.clientWidth;
@@ -70,3 +55,20 @@ function resetCanvas() {
     createCanvas();
 }
 
+
+document.getElementById("toggle_borders").addEventListener("click", function(){
+    if(!isBorder) {
+        let temp = document.getElementsByClassName("pixel");
+        for (let i= 0; i<temp.length; i++){
+            temp[i].style.border = "1px solid grey";
+        }
+        isBorder = 1;
+    }else {
+        let temp = document.getElementsByClassName("pixel");
+        for (let i= 0; i<temp.length; i++){
+            temp[i].style.border = "1px solid white";
+        }
+        isBorder = 0;
+    }
+
+});
