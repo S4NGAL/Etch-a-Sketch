@@ -1,6 +1,9 @@
-const gridContainer = document.querySelector("#grid_container");
-const inputer = document.getElementById("quantity");
 let pixels;
+let canvasSize;
+const gridContainer = document.querySelector("#grid_container");
+canvasSize = gridContainer.clientWidth;
+const inputer = document.getElementById("quantity");
+
 const resetButton = document.getElementById("reset_button");
 resetButton.addEventListener("click", function(){
     resetCanvas();
@@ -11,10 +14,10 @@ createCanvas();
 function createCanvas() {
     //Takes resolution value from user
     let resolution = inputer.value;
-    let pixelSize = (480 - (resolution * 4)) / resolution;
+    let pixelSize = (canvasSize - (resolution * 4)) / resolution;
 
     //Create divs that square of given resolution
-    for (let i = 0; i < resolution*resolution; i++){
+    for (let i = 0; i < resolution**2; i++){
         let temp = document.createElement("div");
         temp.className = "pixel";
         gridContainer.appendChild(temp);
