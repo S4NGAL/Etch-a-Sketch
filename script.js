@@ -1,15 +1,18 @@
 let pixels;
-let canvasSize;
 const gridContainer = document.querySelector("#grid_container");
-canvasSize = gridContainer.clientWidth;
+let canvasSize = gridContainer.clientWidth;
 const inputer = document.getElementById("quantity");
 
 const resetButton = document.getElementById("reset_button");
 resetButton.addEventListener("click", function(){
     resetCanvas();
 })
+
+
+// to create canvas at 
 createCanvas();
 
+///////////////////////////////FUNCTIONS/////////////////////////////
 
 function createCanvas() {
     //Takes resolution value from user
@@ -26,7 +29,7 @@ function createCanvas() {
         });
     }
 
-
+    //give divs their widths and hights 
     pixels = document.getElementsByClassName("pixel");
     for (let i = 0; i < pixels.length; i++) {
         pixels[i].style.width = `${pixelSize}px`;
@@ -44,5 +47,4 @@ function resetCanvas() {
 
     createCanvas();
 }
-   
-console.log(pixels.length);
+
