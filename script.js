@@ -14,7 +14,7 @@ createCanvas();
 function createCanvas() {
     //Takes resolution value from user
     let resolution = inputer.value;
-    let pixelSize = (canvasSize - (resolution * 4)) / resolution;
+    let pixelSize = canvasSize/ resolution;
 
     //Create divs that square of given resolution
     for (let i = 0; i < resolution**2; i++){
