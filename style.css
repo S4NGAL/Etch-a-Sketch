@@ -1,8 +1,14 @@
 body {
+    background-image: url("./backgroun.webp");
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+h1 {
+    color: rgb(66, 13, 62);
+    background-color: rgb(238, 211, 137);
 }
 
 #grid_container {
@@ -17,10 +23,27 @@ body {
 }
 
 .pixel {
+    background-color: white;
     border: 1px solid grey;
     margin: 0;
     flex-grow: 0;
     flex-shrink: 0;
     width: 30px;
     height: 30px;
+}
+
+.options {
+    
+    font-size: 32px;
+    background-color: blueviolet;
+}
+
+#option_container {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+#colorPicker {
+    height: 36px;
 }

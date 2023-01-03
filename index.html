@@ -11,19 +11,25 @@
 
 <body>
     <h1>Welcome To PixelArt maker</h1>
-    <div style="display: flex; align-items: center; gap: 60px;">
-    <div id="option_container">
-    <label for="quantity">pixel resolution</label>
-    <input type="number" id="quantity" min="1" max="64" value="16">
 
-    <label for="colorpicker">Pick Color: </label>
-    <input type="color" value="#000000" id="colorPicker">
-    
-    <button id="reset_button">RESET</button>
-    <button id="toggle_borders">PIXEL GRID</button>
+    <div style="display: flex; align-items: center; gap: 60px;">
+        <div id="option_container">
+            <div>
+                <label class="options" for="quantity">pixel resolution</label>
+                <input class="options" type="number" id="quantity" min="1" max="64" value="16">
+            </div>
+            <div>
+                <label class="options" for="colorpicker">Pick Color: </label>
+                <input class="options" type="color" value="#000000" id="colorPicker">
+            </div>
+            <div>
+                <button class="options" id="reset_button">RESET</button>
+                <button class="options" id="toggle_borders">PIXEL GRID</button>
+            </div>
+        </div>
+        
+        <div id="grid_container"></div>
     </div>
-    
-    <div id="grid_container"></div>
-    </div>
+
 </body>
 </html>
