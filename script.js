@@ -1,4 +1,7 @@
 let pixels;
+let colors = document.getElementById("colorPicker");
+let color;
+
 const gridContainer = document.querySelector("#grid_container");
 let canvasSize = gridContainer.clientWidth;
 const inputer = document.getElementById("quantity");
@@ -25,7 +28,8 @@ function createCanvas() {
         temp.className = "pixel";
         gridContainer.appendChild(temp);
         temp.addEventListener("mouseover", function(){
-            temp.style.backgroundColor = "blue";
+            color = document.getElementById("colorPicker").value;
+            temp.style.backgroundColor = color;
         });
     }
 
