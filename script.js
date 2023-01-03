@@ -60,6 +60,7 @@ function createCanvas() {
 
 
 function resetCanvas() {
+    isBorder = 1;
     //removes all divs and create new ones
     const pixelLength = pixels.length;
     for (let i = pixelLength-1; i >= 0; i--) {
