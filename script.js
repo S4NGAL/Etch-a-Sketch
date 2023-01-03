@@ -1,6 +1,23 @@
 let pixels;
 let colors = document.getElementById("colorPicker");
 let color;
+let isBorder = 1;
+document.getElementById("toggle_borders").addEventListener("click", function(){
+    if(!isBorder) {
+        let temp = document.getElementsByClassName("pixel");
+        for (let i= 0; i<temp.length; i++){
+            temp[i].style.border = "1px solid grey";
+        }
+        isBorder = 1;
+    }else {
+        let temp = document.getElementsByClassName("pixel");
+        for (let i= 0; i<temp.length; i++){
+            temp[i].style.border = "1px solid white";
+        }
+        isBorder = 0;
+    }
+
+});
 
 const gridContainer = document.querySelector("#grid_container");
 let canvasSize = gridContainer.clientWidth;
@@ -24,12 +41,12 @@ function createCanvas() {
 
     //Create divs that square of given resolution
     for (let i = 0; i < resolution**2; i++){
-        let temp = document.createElement("div");
-        temp.className = "pixel";
-        gridContainer.appendChild(temp);
-        temp.addEventListener("mouseover", function(){
+        let pixelSquare = document.createElement("div");
+        pixelSquare.className = "pixel";
+        gridContainer.appendChild(pixelSquare);
+        pixelSquare.addEventListener("mouseover", function(){
             color = document.getElementById("colorPicker").value;
-            temp.style.backgroundColor = color;
+            pixelSquare.style.backgroundColor = color;
         });
     }
 
