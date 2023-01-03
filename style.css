@@ -16,7 +16,7 @@ body {
 }
 
 .pixel {
-    border: 1px solid green;
+    border: 1px solid grey;
     margin: 0;
     flex-grow: 0;
     flex-shrink: 0;
